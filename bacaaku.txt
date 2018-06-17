@@ -1,0 +1,7 @@
+1. Sebelum otak-atik laravelnya, ganti username dan password database di file .env sama config/database.php
+   sesuai username dan password phpmyadmin kalian.
+
+2. Implementasi OOP ada di penggunaan model (app/Admin, Barang, Laporan, Pengguna). 
+   Nanti Method/Fungsi dari tiap kelas/model/tabel bisa dibuat dengan teknik scope (baca: https://laravel.com/docs/5.4/eloquent#local-scopes)
+
+3. Kalau sesuai jadwal UAS, presentasi PSBO KAMIS DEPAN (28 Juni).
