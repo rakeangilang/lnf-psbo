@@ -32,10 +32,10 @@
 
                         <div class="form-group{{ $errors->has('foto_barang') ? ' has-error' : '' }}">
                                 <label for="foto_barang" class="col-md-4 control-label">Foto barang :</label>
-    
+
                                 <div class="col-md-6">
-                                    <input type="file" id="foto_barang" name="foto_barang" class="form-control" accept="image/*">
-    
+                                    <input type="file" id="foto_barang" name="foto_barang" class="form-control" accept="image/*" required>
+
                                     @if ($errors->has('foto_barang'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('foto_barang') }}</strong>
@@ -66,10 +66,10 @@
 
                         <div class="form-group{{ $errors->has('waktu') ? ' has-error' : '' }}">
                                 <label for="waktu" class="col-md-4 control-label">Waktu ditemukan :</label>
-    
+
                                 <div class="col-md-6">
                                     <input id="waktu" type="date" max="3000-12-12" min="2000-12-12" class="form-control" name="waktu" required>
-    
+
                                     @if ($errors->has('waktu'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('waktu') }}</strong>

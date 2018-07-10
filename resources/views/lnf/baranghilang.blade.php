@@ -14,10 +14,10 @@
                     <div class="tabs clearfix tabs-right">
                         <div class="new_arrivals_title">Cek Lost & Found IPB</div>
                         <ul class="clearfix">
-                            
+
                                 <li><a href="{{ url("temuan") }}">Temuan</a></li>
                                 <li ><a href="{{ url("hilang") }}">Kehilangan</a></li>
-                            
+
                         </ul>
                         <div class="tabs_line"><span></span></div>
                     </div>
@@ -47,18 +47,18 @@
                                                         <script async src="https://static.addtoany.com/menu/page.js"></script>
                                                      <!-- AddToAny END -->
                                                 </div>
-                                            </div>	
+                                            </div>
                                         </div>
                                     <br>
-            
+
                                     @endforeach
                                 </ul>
-                                @else 
+                                @else
                                     <p>tidak ada daftar barang</p>
                                 @endif
                         </div>
                     </div>
-                </div>	
+                </div>
             </div>
         </div>
     </div>

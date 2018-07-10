@@ -20,9 +20,9 @@
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
-	
+
 	<header class="header">
 
 		<!-- Top Bar -->
@@ -41,29 +41,32 @@
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 		</div>
 
 		<!-- Header Main -->
 
 		<div class="header_main">
+			@if (Session::has('message'))
+<div class="alert alert-danger">{{ Session::get('message') }}</div>
+			@endif
 			<div class="container">
 				<div class="row">
 
 					<!-- Logo -->
 
 					<!-- Wishlist -->
-					
+
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Main Navigation -->
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						
+
 						<div class="main_nav_content d-flex flex-row">
 
 							<!-- Categories Menu -->
@@ -77,7 +80,7 @@
 								<ul class="cat_menu">
 									<li class="hassubs">
 										<a href="#">Tempat<i class="fas fa-chevron-right"></i></a>
-										<ul>											
+										<ul>
 											<li><a href="{{ url("pomi") }}">Pojok MIPA<i class="fas fa-chevron-right"></i></a></li>
 											<li><a href="{{ url("gww") }}">Graha Widya Wisuda<i class="fas fa-chevron-right"></i></a></li>
 											<li><a href="{{ url("alhur") }}">Masjid Al-Hurriyyah<i class="fas fa-chevron-right"></i></a></li>
@@ -87,7 +90,7 @@
 
 									<li class="hassubs">
 										<a href="#">Jenis Barang<i class="fas fa-chevron-right"></i></a>
-										<ul>											
+										<ul>
 											<li><a href="{{ url("gadget") }}">Gadget<i class="fas fa-chevron-right"></i></a></li>
 											<li><a href="{{ url("dompet") }}">Dompet<i class="fas fa-chevron-right"></i></a></li>
 											<li><a href="{{ url("alat tulis") }}">Alat Tulis<i class="fas fa-chevron-right"></i></a></li>
@@ -106,11 +109,11 @@
 				</div>
 			</div>
 		</nav>
-				
+
 		<!-- Menu -->
 
 	</header>
-	
+
 	<!-- Banner -->
 
 	<div class="banner">
@@ -134,7 +137,7 @@
 	<br>
 	<br>
 	<!-- Characteristics -->
-	
+
 	@yield('content')
 
 

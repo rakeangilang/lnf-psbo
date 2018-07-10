@@ -15,7 +15,7 @@
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                              <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -36,6 +36,21 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-number" class="col-md-4 control-label">Nomer Telpon</label>
+
+                            <div class="col-md-6">
+                                <input id="phone-number" type="number" class="form-control" name="phone-number" value="{{ old('phone-number') }}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role" class="col-md-4 control-label"></label>
+                            <div class="col-md-6">
+                                <input id="role" type="hidden" class="form-control" name="role" value="pengguna">
                             </div>
                         </div>
 
