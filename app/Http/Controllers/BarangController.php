@@ -290,4 +290,51 @@ class BarangController extends Controller
       public function lainPage(){
         return view('lnf.lain');
       }
+
+
+
+      //admin
+      public function adminhilang()
+      {
+          $tampil = barang::join('users', 'barangs.id_user', '=','users.id')
+          ->select('users.*', 'barangs.*')
+          ->where('barangs.jenis', '=', 'kehilangan')
+          ->where('barangs.status', '=', '1')
+          ->get();
+          return view('admin.laporan_hilang', compact('tampil'));
+      }
+
+      public function admintemu()
+      {
+          $tampil = barang::join('users', 'barangs.id_user', '=','users.id')
+          ->select('users.*', 'barangs.*')
+          ->where('barangs.jenis', '=', 'temuan')
+          ->where('barangs.status', '=', '1')
+          ->get();
+          return view('admin.laporan_hilang', compact('tampil'));
+      }
+
+      public function adminhistori()
+      {
+        $tampil = barang::join('users', 'barangs.id_user', '=','users.id')
+        ->select('users.*', 'barangs.*')
+        ->where('barangs.status', '=', '0')
+        ->get();
+        return view('admin.histori',compact('tampil'));
+      }
+
+      public function update_status(Request $request)
+      { 
+        // $file = barang::find($id);
+        // $file= barang::where('status',1)
+        // ->update('status',0);
+        $file = barang::where('id', $request);
+        
+        $file->status = 0;
+        $file->status->save();
+
+        return Redirect::to('/laporan_hilang');
+        // return redirect()->to('/histori');
+      }
+
 }

@@ -24,29 +24,36 @@
                           <th>Nama Pelapor</th>
                           <th>Jenis Barang</th>
                           <th>Nama barang</th>
-                          <th>Dekripsi</th>
+                          <th>Deskripsi</th>
                           <th>Tempat</th>
                           <th>Waktu</th>
                           <th>Foto</th>
                           <th>Status</th>
-                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
-                         {{--  @foreach($tampil as $dt)
+                         @foreach($tampil as $dt)
                             <tr>
-                                <td></td>
-                       
-                                <td>{{$dt->Jenis}}</td>
-                                <td>{{$dt->Nama_Barang}}</td>
-                                <td>{{$dt->Deskripsi}}</td>
-                                <td>{{$dt->Tempat}}</td>
-                                <td>{{$dt->Waktu}}</td>
-                                <td>{{$dt->Foto}}</td>
-                                <td>{{$dt->Status}}</td>
-                                <td></td>
+                                <td>{{$dt->name}}</td>
+                                <td>{{$dt->kategori}}</td>
+                                <td>{{$dt->nama_barang}}</td>
+                                <td>{{$dt->deskripsi}}</td>
+                                <td>{{$dt->tempat}}</td>
+                                <td>{{$dt->waktu}}</td>
+                                <td>{{$dt->foto_barang}}</td>
+                                <td>
+                                {{ Form::open() }}
+                                <!-- @if($dt->status == 1) -->
+                                    {{ Form::hidden('status', 0, ['id' => 'status']) }}
+                                    <button type="submit" class="btn btn-info" value="0">Selesai</a>
+                                <!-- @else
+                                    <button type="submit" class="btn btn-primary" value="0">Belum</a> -->
+                                <!-- @endif -->
+                                {{ Form::close() }}
+                                <!-- <a href="#edit" data-toggle="modal" class="btn btn-info" style="margin:8px;">Selesai</a> -->
+                                </td>
                             </tr>
-                        @endforeach  --}}
+                        @endforeach
                       </tbody>
                     </table>
 					

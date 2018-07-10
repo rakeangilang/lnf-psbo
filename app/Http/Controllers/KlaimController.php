@@ -107,4 +107,15 @@ class KlaimController extends Controller
     {
         //
     }
+
+          
+    public function adminklaim()
+    {
+        $tampil = klaim::join('users', 'klaims.id_pengklaim', '=','users.id')
+        ->join('barangs', 'klaims.id_barang', '=','barangs.id')
+        ->select('klaims.*', 'barangs.*','users.*')
+        ->where('barangs.status', '=', '1')
+        ->get();
+        return view('admin.klaim',compact('tampil'));
+    }
 }

@@ -43,9 +43,21 @@ Route::Auth();
 Route::get('/hilang', 'BarangController@kehilangan');
 Route::get('/temuan', 'BarangController@penemuan');
 Route::get('/klaim/create/{id}', 'KlaimController@create');
-Route::resource('barang', 'BarangController');
-Route::resource('klaim', 'KlaimController');
+// Route::resource('barang', 'BarangController');
+// Route::resource('klaim', 'KlaimController');
 
 Route::get('/home', 'HomeController@index')
     ->name('home')
     ->middleware(['role','auth']);
+
+    
+
+//Admin
+//laporan kehilangan
+Route::get('/laporan_hilang', 'BarangController@adminhilang');
+//laporan penemuan
+Route::get('/laporan_penemuan', 'BarangController@admintemu');
+//histori
+Route::get('/histori', 'BarangController@adminhistori');
+Route::get('/daftar_klaim', 'KlaimController@adminklaim');
+Route::post('/laporan_hilang','BarangController@update_status');

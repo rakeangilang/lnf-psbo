@@ -21,29 +21,27 @@
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
-                          <th>Nama Pelapor</th>
+                          <th>Jenis Laporan</th>
+                          <th>Nama</th>
                           <th>Jenis Barang</th>
                           <th>Nama barang</th>
-                          <th>Dekripsi</th>
+                          <th>Deskripsi</th>
                           <th>Tempat</th>
                           <th>Waktu</th>
                           <th>Foto</th>
-                          <th>Status</th>
-                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($tampil as $dt)
+                      @foreach($tampil as $dt)
                             <tr>
-                                <td></td>
-                                <td>{{$dt->Jenis}}</td>
-                                <td>{{$dt->Nama_Barang}}</td>
-                                <td>{{$dt->Deskripsi}}</td>
-                                <td>{{$dt->Tempat}}</td>
-                                <td>{{$dt->Waktu}}</td>
-                                <td>{{$dt->Foto}}</td>
-                                <td>{{$dt->Status}}</td>
-                                <td></td>
+                                <td>{{$dt->jenis}}</td>
+                                <td>{{$dt->name}}</td>
+                                <td>{{$dt->kategori}}</td>
+                                <td>{{$dt->nama_barang}}</td>
+                                <td>{{$dt->deskripsi}}</td>
+                                <td>{{$dt->tempat}}</td>
+                                <td>{{$dt->waktu}}</td>
+                                <td>{{$dt->foto_barang}}</td>
                             </tr>
                         @endforeach
                       </tbody>
